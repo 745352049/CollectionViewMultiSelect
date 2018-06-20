@@ -1,0 +1,2 @@
+# CollectionViewMultiSelect
+CollectionView的多选删除
