@@ -137,12 +137,19 @@
     [_collectionView reloadData];
 }
 - (void)deleteAction {
-    for (int i = 0; i < self.dataSource.count; i++) {
-        PhotoModel *itemModel = self.dataSource[i];
-        if ([itemModel.isSelected isEqualToString:@"select"]) {
-            [self.dataSource removeObjectAtIndex:i];
+    if (self.isAllSelect) {
+        [self.dataSource removeAllObjects];
+    } else {
+        for (int i = 0; i < self.dataSource.count; i++) {
+            PhotoModel *itemModel = self.dataSource[i];
+            if ([itemModel.isSelected isEqualToString:@"select"]) {
+                [self.dataSource removeObject:itemModel];
+                // 当有元素被删除的时候i的值回退1 从而抵消因删除元素而导致的元素下标位移的变化
+                i--;
+            }
         }
     }
+    
     self.isAllSelect = NO;
     self.selectNum = self.isAllSelect ? (unsigned)self.dataSource.count : 0;
     self.selectLabel.text =  [NSString stringWithFormat:@"已选%lu张",self.isAllSelect ? (unsigned long)self.dataSource.count : 0];
