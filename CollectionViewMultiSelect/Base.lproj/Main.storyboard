@@ -66,7 +66,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="j7O-x7-lnn" kind="show" id="NdE-wq-GQv"/>
+                                    <segue destination="j7O-x7-lnn" kind="push" id="iRX-SK-ZxT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yui-wD-JiB">
@@ -80,7 +80,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bzb-U4-vpe" kind="show" id="eNc-Sm-8GO"/>
+                                    <segue destination="bzb-U4-vpe" kind="push" id="hfv-38-DAW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCA-4M-f4U">
@@ -90,11 +90,11 @@
                                     <constraint firstAttribute="height" constant="40" id="gfE-ME-kFP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="TableView侧滑删除">
+                                <state key="normal" title="TableView单选删除">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AY6-Bb-osT" kind="show" id="qlT-9c-JNj"/>
+                                    <segue destination="AY6-Bb-osT" kind="push" id="77L-ap-bjd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-JX-hWd">
@@ -108,7 +108,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ccS-d0-vmz" kind="show" id="HOa-bv-f8w"/>
+                                    <segue destination="ccS-d0-vmz" kind="push" id="fnT-E7-mPD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="76.911544227886068"/>
         </scene>
-        <!--Table View Sideslip View Controller-->
+        <!--Table View Radio View Controller-->
         <scene sceneID="So6-Wu-KOq">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="AY6-Bb-osT" customClass="TableViewSideslipViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="AY6-Bb-osT" customClass="TableViewRadioViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0x6-om-RTv"/>
                         <viewControllerLayoutGuide type="bottom" id="PcO-tj-CnO"/>
@@ -147,6 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JS9-bE-Onm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yc-td-Wgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,10 +166,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mIY-o2-rgd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSY-nb-XBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-298"/>
+            <point key="canvasLocation" x="2508" y="-785"/>
         </scene>
         <!--Table View Multi Select View Controller-->
         <scene sceneID="kPv-mt-6ux">
@@ -206,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRA-Dc-aL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-961"/>
+            <point key="canvasLocation" x="1698" y="-799"/>
         </scene>
     </scenes>
 </document>

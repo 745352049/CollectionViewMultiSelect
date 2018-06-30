@@ -29,8 +29,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.title = @"多选";
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 60, 44);
+    [btn setTitle:@"删除" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(deleteAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem  *barBtn = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = barBtn;
     [self loadData];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TableViewCell class]) bundle:nil] forCellReuseIdentifier:@"TableViewCellID"];
+}
+- (void)deleteAction {
+    for (int i = 0; i < self.dataSource.count; i++) {
+        PhotoModel *itemModel = self.dataSource[i];
+        if ([itemModel.isSelected isEqualToString:@"select"]) {
+            [self.dataSource removeObject:itemModel];
+            // 当有元素被删除的时候i的值回退1 从而抵消因删除元素而导致的元素下标位移的变化
+            i--;
+        }
+    }
+    [self.tableView reloadData];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

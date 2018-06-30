@@ -34,6 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.title = @"多选";
     self.isAllSelect = NO;
     self.selectNum = 0;
     [self loadData];

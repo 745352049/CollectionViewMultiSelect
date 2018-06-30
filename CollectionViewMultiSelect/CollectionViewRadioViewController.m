@@ -31,8 +31,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.title = @"单选";
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 60, 44);
+    [btn setTitle:@"删除" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(deleteAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem  *barBtn = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = barBtn;
     [self loadData];
     [self collectionView];
+}
+- (void)deleteAction {
+    if ([self.indexPath length] == 0) {
+        NSLog(@"请选择要删除的图片");
+        return;
+    }
+    PhotoModel *itemModel = [self.dataSource objectAtIndex:self.indexPath.row];
+    [self.dataSource removeObject:itemModel];
+    [self.collectionView deleteItemsAtIndexPaths:@[self.indexPath]];
+    self.indexPath = NULL;
 }
 #pragma mark - Delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -52,17 +70,17 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    PhotoModel *itemModel = self.dataSource[indexPath.row];
+    PhotoModel *itemModel = [self.dataSource objectAtIndex:indexPath.row];
     itemModel.isSelected = [itemModel.isSelected isEqual:@"normal"] ? @"select" : @"normal";
     [collectionView reloadItemsAtIndexPaths:@[indexPath]];
-    if (self.indexPath) {
-        PhotoModel *model = self.dataSource[self.indexPath.row];
+    // 取消之前选中的 indexPath
+    if ([self.indexPath length] == 2) {
+        PhotoModel *model = [self.dataSource objectAtIndex:self.indexPath.row];
         model.isSelected = [model.isSelected isEqual:@"normal"] ? @"select" : @"normal";
         [collectionView reloadItemsAtIndexPaths:@[self.indexPath]];
     }
     // 记录当前选择的 indexPath
     self.indexPath = indexPath;
-    
 }
 /**
  获取数据

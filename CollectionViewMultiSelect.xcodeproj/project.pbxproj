@@ -11,7 +11,7 @@
 		3F78FC5020E76FF6005E19E6 /* TableViewMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */; };
 		3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5520E778F2005E19E6 /* TableViewCell.m */; };
 		3F78FC5820E778F2005E19E6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F78FC5620E778F2005E19E6 /* TableViewCell.xib */; };
-		3F78FC5B20E7803C005E19E6 /* TableViewSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5A20E7803C005E19E6 /* TableViewSideslipViewController.m */; };
+		3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */; };
 		3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */; };
 		3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A520DA07150055EE61 /* AppDelegate.m */; };
 		3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A820DA07150055EE61 /* ViewController.m */; };
@@ -35,8 +35,8 @@
 		3F78FC5420E778F2005E19E6 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		3F78FC5520E778F2005E19E6 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		3F78FC5620E778F2005E19E6 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		3F78FC5920E7803C005E19E6 /* TableViewSideslipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewSideslipViewController.h; sourceTree = "<group>"; };
-		3F78FC5A20E7803C005E19E6 /* TableViewSideslipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewSideslipViewController.m; sourceTree = "<group>"; };
+		3F78FC5920E7803C005E19E6 /* TableViewRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewRadioViewController.h; sourceTree = "<group>"; };
+		3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewRadioViewController.m; sourceTree = "<group>"; };
 		3F78FC5C20E785D5005E19E6 /* CollectionViewRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewRadioViewController.h; sourceTree = "<group>"; };
 		3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewRadioViewController.m; sourceTree = "<group>"; };
 		3FB8B7A120DA07150055EE61 /* CollectionViewMultiSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewMultiSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +106,11 @@
 				3FB8B7C620DA1F5F0055EE61 /* CollectionViewCell.xib */,
 				3F78FC4E20E76FF6005E19E6 /* TableViewMultiSelectViewController.h */,
 				3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */,
+				3F78FC5920E7803C005E19E6 /* TableViewRadioViewController.h */,
+				3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */,
 				3F78FC5420E778F2005E19E6 /* TableViewCell.h */,
 				3F78FC5520E778F2005E19E6 /* TableViewCell.m */,
 				3F78FC5620E778F2005E19E6 /* TableViewCell.xib */,
-				3F78FC5920E7803C005E19E6 /* TableViewSideslipViewController.h */,
-				3F78FC5A20E7803C005E19E6 /* TableViewSideslipViewController.m */,
 				3F148D3C20DA227000E501BB /* PhotoModel.h */,
 				3F148D3D20DA227000E501BB /* PhotoModel.m */,
 				3FB8B7AA20DA07150055EE61 /* Main.storyboard */,
@@ -241,7 +241,7 @@
 				3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */,
 				3FB8B7BC20DA16A40055EE61 /* CollectionViewMultiSelectViewController.m in Sources */,
 				3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */,
-				3F78FC5B20E7803C005E19E6 /* TableViewSideslipViewController.m in Sources */,
+				3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */,
 				3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */,
 				3FB8B7B420DA07150055EE61 /* main.m in Sources */,
 				3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */,
@@ -384,7 +384,7 @@
 				INFOPLIST_FILE = CollectionViewMultiSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crystalisland.CollectionViewMultiSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koushutianxia.CollectionViewMultiSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -400,7 +400,7 @@
 				INFOPLIST_FILE = CollectionViewMultiSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crystalisland.CollectionViewMultiSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koushutianxia.CollectionViewMultiSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

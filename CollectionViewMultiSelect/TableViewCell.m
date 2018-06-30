@@ -7,6 +7,7 @@
 //
 
 #import "TableViewCell.h"
+#import <UIImageView+WebCache.h>
 
 @implementation TableViewCell
 
@@ -15,9 +16,7 @@
     // Initialization code
 }
 - (void)setCellWithModel:(PhotoModel *)model {
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.galary_item_path]];
-    UIImage *image = [UIImage imageWithData:data];
-    self.itemImageView.image = image;
+    [self.itemImageView sd_setImageWithURL:[NSURL URLWithString:model.galary_item_path]];
     self.itemLabel.text = model.galary_item_path;
     self.isSelectImageView.image = [UIImage imageNamed:model.isSelected];
 }

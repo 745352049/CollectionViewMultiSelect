@@ -1,5 +1,5 @@
 //
-//  TableViewSideslipViewController.h
+//  TableViewRadioViewController.h
 //  CollectionViewMultiSelect
 //
 //  Created by 水晶岛 on 2018/6/30.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewSideslipViewController : UIViewController
+@interface TableViewRadioViewController : UIViewController
 
 @end
