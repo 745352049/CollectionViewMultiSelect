@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F148D3D20DA227000E501BB /* PhotoModel.m */; };
+		3F78FC5020E76FF6005E19E6 /* TableViewMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */; };
+		3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5520E778F2005E19E6 /* TableViewCell.m */; };
+		3F78FC5820E778F2005E19E6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F78FC5620E778F2005E19E6 /* TableViewCell.xib */; };
 		3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A520DA07150055EE61 /* AppDelegate.m */; };
 		3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A820DA07150055EE61 /* ViewController.m */; };
 		3FB8B7AC20DA07150055EE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8B7AA20DA07150055EE61 /* Main.storyboard */; };
@@ -25,6 +28,11 @@
 		124D150A143694F007541A41 /* Pods-CollectionViewMultiSelect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewMultiSelect.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewMultiSelect/Pods-CollectionViewMultiSelect.release.xcconfig"; sourceTree = "<group>"; };
 		3F148D3C20DA227000E501BB /* PhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
 		3F148D3D20DA227000E501BB /* PhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
+		3F78FC4E20E76FF6005E19E6 /* TableViewMultiSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewMultiSelectViewController.h; sourceTree = "<group>"; };
+		3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewMultiSelectViewController.m; sourceTree = "<group>"; };
+		3F78FC5420E778F2005E19E6 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		3F78FC5520E778F2005E19E6 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		3F78FC5620E778F2005E19E6 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		3FB8B7A120DA07150055EE61 /* CollectionViewMultiSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewMultiSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8B7A420DA07150055EE61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FB8B7A520DA07150055EE61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +96,11 @@
 				3FB8B7C420DA1F5F0055EE61 /* CollectionViewCell.h */,
 				3FB8B7C520DA1F5F0055EE61 /* CollectionViewCell.m */,
 				3FB8B7C620DA1F5F0055EE61 /* CollectionViewCell.xib */,
+				3F78FC4E20E76FF6005E19E6 /* TableViewMultiSelectViewController.h */,
+				3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */,
+				3F78FC5420E778F2005E19E6 /* TableViewCell.h */,
+				3F78FC5520E778F2005E19E6 /* TableViewCell.m */,
+				3F78FC5620E778F2005E19E6 /* TableViewCell.xib */,
 				3F148D3C20DA227000E501BB /* PhotoModel.h */,
 				3F148D3D20DA227000E501BB /* PhotoModel.m */,
 				3FB8B7AA20DA07150055EE61 /* Main.storyboard */,
@@ -176,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8B7B120DA07150055EE61 /* LaunchScreen.storyboard in Resources */,
+				3F78FC5820E778F2005E19E6 /* TableViewCell.xib in Resources */,
 				3FB8B7C820DA1F5F0055EE61 /* CollectionViewCell.xib in Resources */,
 				3FB8B7AE20DA07150055EE61 /* Assets.xcassets in Resources */,
 				3FB8B7C320DA1E270055EE61 /* textJson.json in Resources */,
@@ -212,9 +226,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8B7C720DA1F5F0055EE61 /* CollectionViewCell.m in Sources */,
+				3F78FC5020E76FF6005E19E6 /* TableViewMultiSelectViewController.m in Sources */,
 				3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */,
 				3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */,
 				3FB8B7BC20DA16A40055EE61 /* CollectionViewMultiSelectViewController.m in Sources */,
+				3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */,
 				3FB8B7B420DA07150055EE61 /* main.m in Sources */,
 				3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */,
 			);
@@ -290,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -339,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -358,7 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crystalisland.CollectionViewMultiSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,7 +390,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crystalisland.CollectionViewMultiSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

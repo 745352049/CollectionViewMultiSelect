@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="220" y="77"/>
         </scene>
-        <!--CollectionViewMultiSelect-->
+        <!--我的-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -54,20 +54,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-JB-HWB">
+                                <rect key="frame" x="0.0" y="114" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LOm-qJ-8Wj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableView多选删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j7O-x7-lnn" kind="show" id="NdE-wq-GQv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yui-wD-JiB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2qb-xj-Cfv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="CollectionView多选删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bzb-U4-vpe" kind="show" id="eNc-Sm-8GO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qvb-JB-HWB" secondAttribute="trailing" id="3RE-Rw-BVh"/>
+                            <constraint firstItem="Qvb-JB-HWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wm-1I-TPY"/>
+                            <constraint firstItem="Qvb-JB-HWB" firstAttribute="top" secondItem="yui-wD-JiB" secondAttribute="bottom" constant="10" id="J9I-86-rZw"/>
+                            <constraint firstItem="yui-wD-JiB" firstAttribute="top" secondItem="zMf-65-aM1" secondAttribute="bottom" id="bSt-ch-ogC"/>
+                            <constraint firstItem="yui-wD-JiB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oun-mi-mcR"/>
+                            <constraint firstAttribute="trailing" secondItem="yui-wD-JiB" secondAttribute="trailing" id="x3K-JU-m45"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CollectionViewMultiSelect" id="Bpi-Bh-2S5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="nDU-NJ-DTy">
-                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="bzb-U4-vpe" kind="push" id="Nyw-V1-bPX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="我的" id="Bpi-Bh-2S5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="77"/>
+            <point key="canvasLocation" x="941.60000000000002" y="76.911544227886068"/>
+        </scene>
+        <!--Table View Multi Select View Controller-->
+        <scene sceneID="kPv-mt-6ux">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="j7O-x7-lnn" customClass="TableViewMultiSelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rn8-9Q-s3V"/>
+                        <viewControllerLayoutGuide type="bottom" id="ip6-Qf-3jQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Tp-lg-y7R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lW2-lg-dS1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pz1-tl-kQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="198"/>
         </scene>
         <!--Collection View Multi Select View Controller-->
         <scene sceneID="Azm-Mr-pyT">
@@ -86,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRA-Dc-aL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="77"/>
+            <point key="canvasLocation" x="1967" y="-472"/>
         </scene>
     </scenes>
 </document>
