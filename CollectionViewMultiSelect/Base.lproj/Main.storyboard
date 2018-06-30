@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-JB-HWB">
-                                <rect key="frame" x="0.0" y="114" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LOm-qJ-8Wj"/>
@@ -83,14 +83,48 @@
                                     <segue destination="bzb-U4-vpe" kind="show" id="eNc-Sm-8GO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCA-4M-f4U">
+                                <rect key="frame" x="0.0" y="214" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gfE-ME-kFP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableView侧滑删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AY6-Bb-osT" kind="show" id="qlT-9c-JNj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-JX-hWd">
+                                <rect key="frame" x="0.0" y="114" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vKw-Cp-JxB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="CollectionView单选删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ccS-d0-vmz" kind="show" id="HOa-bv-f8w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Qvb-JB-HWB" secondAttribute="trailing" id="3RE-Rw-BVh"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wm-1I-TPY"/>
-                            <constraint firstItem="Qvb-JB-HWB" firstAttribute="top" secondItem="yui-wD-JiB" secondAttribute="bottom" constant="10" id="J9I-86-rZw"/>
+                            <constraint firstAttribute="trailing" secondItem="zrp-JX-hWd" secondAttribute="trailing" id="9VA-WW-sXR"/>
+                            <constraint firstItem="Qvb-JB-HWB" firstAttribute="top" secondItem="zrp-JX-hWd" secondAttribute="bottom" constant="10" id="IF5-iO-aCy"/>
+                            <constraint firstItem="zrp-JX-hWd" firstAttribute="top" secondItem="yui-wD-JiB" secondAttribute="bottom" constant="10" id="JOX-Oj-CHc"/>
+                            <constraint firstItem="zrp-JX-hWd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M6S-qY-viZ"/>
+                            <constraint firstAttribute="trailing" secondItem="GCA-4M-f4U" secondAttribute="trailing" id="Ycx-PT-fDk"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="top" secondItem="zMf-65-aM1" secondAttribute="bottom" id="bSt-ch-ogC"/>
+                            <constraint firstItem="GCA-4M-f4U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hl1-pj-bCm"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oun-mi-mcR"/>
+                            <constraint firstItem="GCA-4M-f4U" firstAttribute="top" secondItem="Qvb-JB-HWB" secondAttribute="bottom" constant="10" id="sqR-T1-ZZy"/>
                             <constraint firstAttribute="trailing" secondItem="yui-wD-JiB" secondAttribute="trailing" id="x3K-JU-m45"/>
                         </constraints>
                     </view>
@@ -99,6 +133,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="76.911544227886068"/>
+        </scene>
+        <!--Table View Sideslip View Controller-->
+        <scene sceneID="So6-Wu-KOq">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="AY6-Bb-osT" customClass="TableViewSideslipViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0x6-om-RTv"/>
+                        <viewControllerLayoutGuide type="bottom" id="PcO-tj-CnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1PA-zq-ImB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Yc-td-Wgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2559" y="503"/>
+        </scene>
+        <!--Collection View Radio View Controller-->
+        <scene sceneID="scC-hc-OJG">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ccS-d0-vmz" customClass="CollectionViewRadioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i9F-jK-w8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="b6p-eo-JKN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7yb-eq-Izn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSY-nb-XBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-298"/>
         </scene>
         <!--Table View Multi Select View Controller-->
         <scene sceneID="kPv-mt-6ux">
@@ -117,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pz1-tl-kQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="198"/>
+            <point key="canvasLocation" x="2559" y="-174"/>
         </scene>
         <!--Collection View Multi Select View Controller-->
         <scene sceneID="Azm-Mr-pyT">
@@ -136,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRA-Dc-aL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="-472"/>
+            <point key="canvasLocation" x="1870" y="-961"/>
         </scene>
     </scenes>
 </document>
