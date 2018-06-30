@@ -20,12 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018年 水晶岛. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz1-gl-EWO">
+                                <rect key="frame" x="0.0" y="592" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="vfK-k2-NDT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你值得拥有的Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb9-WG-qEa">
+                                <rect key="frame" x="0.0" y="140" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dju-KD-pOb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜欢请给Star" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ug-Ju-ob7">
+                                <rect key="frame" x="0.0" y="185" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Y8j-vM-RE5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="谢谢支持" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUB-BH-oh9">
+                                <rect key="frame" x="0.0" y="230" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="v6Q-fE-xnB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2ug-Ju-ob7" secondAttribute="trailing" id="4cD-O7-RJl"/>
+                            <constraint firstItem="RUB-BH-oh9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9Zo-Yk-MHi"/>
+                            <constraint firstAttribute="trailing" secondItem="RUB-BH-oh9" secondAttribute="trailing" id="BgS-Wg-SaY"/>
+                            <constraint firstItem="2ug-Ju-ob7" firstAttribute="top" secondItem="rb9-WG-qEa" secondAttribute="bottom" constant="20" id="DtD-Vh-v8Q"/>
+                            <constraint firstItem="rb9-WG-qEa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Eme-C8-HH0"/>
+                            <constraint firstAttribute="trailing" secondItem="vz1-gl-EWO" secondAttribute="trailing" id="MRG-J3-l29"/>
+                            <constraint firstAttribute="trailing" secondItem="rb9-WG-qEa" secondAttribute="trailing" id="Nrk-VM-SRY"/>
+                            <constraint firstItem="rb9-WG-qEa" firstAttribute="top" secondItem="Nvf-xD-Th8" secondAttribute="bottom" constant="120" id="bOq-le-7s5"/>
+                            <constraint firstItem="RUB-BH-oh9" firstAttribute="top" secondItem="2ug-Ju-ob7" secondAttribute="bottom" constant="20" id="bVU-3f-2bd"/>
+                            <constraint firstItem="vz1-gl-EWO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cJX-mp-HSv"/>
+                            <constraint firstItem="2ug-Ju-ob7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lTN-o7-7hw"/>
+                            <constraint firstItem="jur-Tq-PnQ" firstAttribute="top" secondItem="vz1-gl-EWO" secondAttribute="bottom" constant="50" id="zoo-y1-TmE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-258" y="349"/>
         </scene>
     </scenes>
 </document>
