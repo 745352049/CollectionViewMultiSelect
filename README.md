@@ -7,3 +7,9 @@ CollectionView 单选删除
 TableView 多选删除
 
 TableView 单选删除
+
+TableView侧滑删除与添加
+
+TableView编辑模式下多个删除
+
+TableView编辑模式下单个删除
