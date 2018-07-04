@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F09C79E20E80015005A6674 /* TableViewSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F09C79D20E80015005A6674 /* TableViewSideslipViewController.m */; };
+		3F09C7A120E8104A005A6674 /* TableViewEditRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F09C7A020E8104A005A6674 /* TableViewEditRadioViewController.m */; };
 		3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F148D3D20DA227000E501BB /* PhotoModel.m */; };
+		3F521E2A20ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F521E2920ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m */; };
 		3F78FC5020E76FF6005E19E6 /* TableViewMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */; };
 		3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5520E778F2005E19E6 /* TableViewCell.m */; };
 		3F78FC5820E778F2005E19E6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F78FC5620E778F2005E19E6 /* TableViewCell.xib */; };
@@ -28,8 +31,14 @@
 
 /* Begin PBXFileReference section */
 		124D150A143694F007541A41 /* Pods-CollectionViewMultiSelect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewMultiSelect.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionViewMultiSelect/Pods-CollectionViewMultiSelect.release.xcconfig"; sourceTree = "<group>"; };
+		3F09C79C20E80015005A6674 /* TableViewSideslipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewSideslipViewController.h; sourceTree = "<group>"; };
+		3F09C79D20E80015005A6674 /* TableViewSideslipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewSideslipViewController.m; sourceTree = "<group>"; };
+		3F09C79F20E8104A005A6674 /* TableViewEditRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewEditRadioViewController.h; sourceTree = "<group>"; };
+		3F09C7A020E8104A005A6674 /* TableViewEditRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewEditRadioViewController.m; sourceTree = "<group>"; };
 		3F148D3C20DA227000E501BB /* PhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
 		3F148D3D20DA227000E501BB /* PhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
+		3F521E2820ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewEditMultiSelectViewController.h; sourceTree = "<group>"; };
+		3F521E2920ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewEditMultiSelectViewController.m; sourceTree = "<group>"; };
 		3F78FC4E20E76FF6005E19E6 /* TableViewMultiSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewMultiSelectViewController.h; sourceTree = "<group>"; };
 		3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewMultiSelectViewController.m; sourceTree = "<group>"; };
 		3F78FC5420E778F2005E19E6 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -108,6 +117,12 @@
 				3F78FC4F20E76FF6005E19E6 /* TableViewMultiSelectViewController.m */,
 				3F78FC5920E7803C005E19E6 /* TableViewRadioViewController.h */,
 				3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */,
+				3F09C79C20E80015005A6674 /* TableViewSideslipViewController.h */,
+				3F09C79D20E80015005A6674 /* TableViewSideslipViewController.m */,
+				3F521E2820ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.h */,
+				3F521E2920ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m */,
+				3F09C79F20E8104A005A6674 /* TableViewEditRadioViewController.h */,
+				3F09C7A020E8104A005A6674 /* TableViewEditRadioViewController.m */,
 				3F78FC5420E778F2005E19E6 /* TableViewCell.h */,
 				3F78FC5520E778F2005E19E6 /* TableViewCell.m */,
 				3F78FC5620E778F2005E19E6 /* TableViewCell.xib */,
@@ -235,12 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F09C7A120E8104A005A6674 /* TableViewEditRadioViewController.m in Sources */,
+				3F09C79E20E80015005A6674 /* TableViewSideslipViewController.m in Sources */,
 				3FB8B7C720DA1F5F0055EE61 /* CollectionViewCell.m in Sources */,
 				3F78FC5020E76FF6005E19E6 /* TableViewMultiSelectViewController.m in Sources */,
 				3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */,
 				3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */,
 				3FB8B7BC20DA16A40055EE61 /* CollectionViewMultiSelectViewController.m in Sources */,
 				3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */,
+				3F521E2A20ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m in Sources */,
 				3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */,
 				3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */,
 				3FB8B7B420DA07150055EE61 /* main.m in Sources */,

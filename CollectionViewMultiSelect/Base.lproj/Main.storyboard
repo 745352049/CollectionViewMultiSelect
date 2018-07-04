@@ -97,6 +97,20 @@
                                     <segue destination="AY6-Bb-osT" kind="push" id="77L-ap-bjd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-pf-axe">
+                                <rect key="frame" x="0.0" y="264" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GnE-zn-3Od"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableView侧滑删除与添加">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cYP-8N-bit" kind="push" id="JBP-h9-EHu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-JX-hWd">
                                 <rect key="frame" x="0.0" y="114" width="375" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -111,21 +125,58 @@
                                     <segue destination="ccS-d0-vmz" kind="push" id="fnT-E7-mPD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZK-pj-slH">
+                                <rect key="frame" x="0.0" y="314" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kwn-iu-mBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableView编辑模式下多个删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5qS-Kx-R10" kind="push" id="bPK-Qj-kC1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge2-xB-Xgq">
+                                <rect key="frame" x="0.0" y="364" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wwA-jy-iIU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableView编辑模式下单个删除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b7h-1E-Rpi" kind="push" id="q1s-vr-OSA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Qvb-JB-HWB" secondAttribute="trailing" id="3RE-Rw-BVh"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wm-1I-TPY"/>
+                            <constraint firstItem="LqO-pf-axe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8MD-1U-m8n"/>
                             <constraint firstAttribute="trailing" secondItem="zrp-JX-hWd" secondAttribute="trailing" id="9VA-WW-sXR"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="top" secondItem="zrp-JX-hWd" secondAttribute="bottom" constant="10" id="IF5-iO-aCy"/>
                             <constraint firstItem="zrp-JX-hWd" firstAttribute="top" secondItem="yui-wD-JiB" secondAttribute="bottom" constant="10" id="JOX-Oj-CHc"/>
                             <constraint firstItem="zrp-JX-hWd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M6S-qY-viZ"/>
+                            <constraint firstItem="ge2-xB-Xgq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MyL-bq-XVE"/>
                             <constraint firstAttribute="trailing" secondItem="GCA-4M-f4U" secondAttribute="trailing" id="Ycx-PT-fDk"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="top" secondItem="zMf-65-aM1" secondAttribute="bottom" id="bSt-ch-ogC"/>
+                            <constraint firstItem="gZK-pj-slH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dw9-K3-pFL"/>
+                            <constraint firstItem="ge2-xB-Xgq" firstAttribute="top" secondItem="gZK-pj-slH" secondAttribute="bottom" constant="10" id="eAB-kN-D22"/>
+                            <constraint firstAttribute="trailing" secondItem="LqO-pf-axe" secondAttribute="trailing" id="gDr-x6-OFs"/>
+                            <constraint firstAttribute="trailing" secondItem="ge2-xB-Xgq" secondAttribute="trailing" id="gm3-Gf-5e1"/>
                             <constraint firstItem="GCA-4M-f4U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hl1-pj-bCm"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oun-mi-mcR"/>
                             <constraint firstItem="GCA-4M-f4U" firstAttribute="top" secondItem="Qvb-JB-HWB" secondAttribute="bottom" constant="10" id="sqR-T1-ZZy"/>
+                            <constraint firstAttribute="trailing" secondItem="gZK-pj-slH" secondAttribute="trailing" id="tpW-sm-n34"/>
                             <constraint firstAttribute="trailing" secondItem="yui-wD-JiB" secondAttribute="trailing" id="x3K-JU-m45"/>
+                            <constraint firstItem="LqO-pf-axe" firstAttribute="top" secondItem="GCA-4M-f4U" secondAttribute="bottom" constant="10" id="xU6-oD-xYP"/>
+                            <constraint firstItem="gZK-pj-slH" firstAttribute="top" secondItem="LqO-pf-axe" secondAttribute="bottom" constant="10" id="yEX-Iv-wYs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="Bpi-Bh-2S5"/>
@@ -133,6 +184,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="76.911544227886068"/>
+        </scene>
+        <!--Table View Sideslip View Controller-->
+        <scene sceneID="ejG-wd-xSB">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="cYP-8N-bit" customClass="TableViewSideslipViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIV-G1-Ape"/>
+                        <viewControllerLayoutGuide type="bottom" id="pc9-aK-679"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zVy-dT-eGq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nkf-UK-UDl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7v-x9-oda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="463"/>
+        </scene>
+        <!--Table View Edit Radio View Controller-->
+        <scene sceneID="2eH-UH-jYf">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="b7h-1E-Rpi" customClass="TableViewEditRadioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O4y-JR-EKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="M9n-hg-RBM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SdI-ec-vBy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E0L-Em-Ugm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHp-82-e9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="1122"/>
+        </scene>
+        <!--Table View Edit Multi Select View Controller-->
+        <scene sceneID="Gj8-0e-aES">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="5qS-Kx-R10" customClass="TableViewEditMultiSelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zVs-X7-ZAl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ddr-kx-c7P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yh7-39-9Ud">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gch-aK-XkB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFh-n6-eOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2537" y="463"/>
         </scene>
         <!--Table View Radio View Controller-->
         <scene sceneID="So6-Wu-KOq">
@@ -151,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yc-td-Wgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559" y="503"/>
+            <point key="canvasLocation" x="2537" y="-196"/>
         </scene>
         <!--Collection View Radio View Controller-->
         <scene sceneID="scC-hc-OJG">
@@ -170,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSY-nb-XBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="-785"/>
+            <point key="canvasLocation" x="2537" y="-1039"/>
         </scene>
         <!--Table View Multi Select View Controller-->
         <scene sceneID="kPv-mt-6ux">
@@ -189,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pz1-tl-kQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559" y="-174"/>
+            <point key="canvasLocation" x="1833" y="-196"/>
         </scene>
         <!--Collection View Multi Select View Controller-->
         <scene sceneID="Azm-Mr-pyT">
@@ -208,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRA-Dc-aL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-799"/>
+            <point key="canvasLocation" x="1834" y="-1038"/>
         </scene>
     </scenes>
 </document>
