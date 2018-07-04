@@ -39,6 +39,10 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TableViewCell class]) bundle:nil] forCellReuseIdentifier:@"TableViewCellID"];
 }
 - (void)allSelectAction:(UIBarButtonItem *)sender {
+    if (!self.tableView.isEditing) {
+        NSLog(@"非编辑模式");
+        return;
+    }
     static BOOL flag = NO;
     flag = !flag;
     if (flag) {
@@ -90,22 +94,6 @@
     [cell setCellWithModel:model];
     
     return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView.editing) {
-        PhotoModel *itemModel = self.dataSource[indexPath.row];
-        itemModel.isSelected = [itemModel.isSelected isEqual:@"normal"] ? @"select" : @"normal";
-    } else {
-        NSLog(@"不是编辑模式");
-    }
-}
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView.editing) {
-        PhotoModel *itemModel = self.dataSource[indexPath.row];
-        itemModel.isSelected = [itemModel.isSelected isEqual:@"normal"] ? @"select" : @"normal";
-    } else {
-        NSLog(@"不是编辑模式!");
-    }
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
