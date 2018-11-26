@@ -16,6 +16,7 @@
 		3F78FC5820E778F2005E19E6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F78FC5620E778F2005E19E6 /* TableViewCell.xib */; };
 		3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */; };
 		3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */; };
+		3FA927C321ABC5A5003840A8 /* CollectionDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA927C221ABC5A5003840A8 /* CollectionDragViewController.m */; };
 		3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A520DA07150055EE61 /* AppDelegate.m */; };
 		3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A820DA07150055EE61 /* ViewController.m */; };
 		3FB8B7AC20DA07150055EE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8B7AA20DA07150055EE61 /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 		3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewRadioViewController.m; sourceTree = "<group>"; };
 		3F78FC5C20E785D5005E19E6 /* CollectionViewRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewRadioViewController.h; sourceTree = "<group>"; };
 		3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewRadioViewController.m; sourceTree = "<group>"; };
+		3FA927C121ABC5A5003840A8 /* CollectionDragViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionDragViewController.h; sourceTree = "<group>"; };
+		3FA927C221ABC5A5003840A8 /* CollectionDragViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDragViewController.m; sourceTree = "<group>"; };
 		3FB8B7A120DA07150055EE61 /* CollectionViewMultiSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewMultiSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8B7A420DA07150055EE61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FB8B7A520DA07150055EE61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				3FB8B7BB20DA16A40055EE61 /* CollectionViewMultiSelectViewController.m */,
 				3F78FC5C20E785D5005E19E6 /* CollectionViewRadioViewController.h */,
 				3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */,
+				3FA927C121ABC5A5003840A8 /* CollectionDragViewController.h */,
+				3FA927C221ABC5A5003840A8 /* CollectionDragViewController.m */,
 				3FB8B7C420DA1F5F0055EE61 /* CollectionViewCell.h */,
 				3FB8B7C520DA1F5F0055EE61 /* CollectionViewCell.m */,
 				3FB8B7C620DA1F5F0055EE61 /* CollectionViewCell.xib */,
@@ -258,6 +263,7 @@
 				3F148D3E20DA227000E501BB /* PhotoModel.m in Sources */,
 				3FB8B7BC20DA16A40055EE61 /* CollectionViewMultiSelectViewController.m in Sources */,
 				3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */,
+				3FA927C321ABC5A5003840A8 /* CollectionDragViewController.m in Sources */,
 				3F521E2A20ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m in Sources */,
 				3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */,
 				3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */,

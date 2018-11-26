@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HWX-Ao-Fbs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HWX-Ao-Fbs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -153,10 +153,26 @@
                                     <segue destination="b7h-1E-Rpi" kind="push" id="q1s-vr-OSA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-Er-KQE">
+                                <rect key="frame" x="0.0" y="414" width="375" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5eW-2G-16R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="CollectionView拖动">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rcS-7f-fga" kind="push" id="X97-DV-fu2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8dI-Er-KQE" firstAttribute="top" secondItem="ge2-xB-Xgq" secondAttribute="bottom" constant="10" id="2zY-5t-8Kl"/>
                             <constraint firstAttribute="trailing" secondItem="Qvb-JB-HWB" secondAttribute="trailing" id="3RE-Rw-BVh"/>
+                            <constraint firstAttribute="trailing" secondItem="8dI-Er-KQE" secondAttribute="trailing" id="62O-KX-qIs"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wm-1I-TPY"/>
                             <constraint firstItem="LqO-pf-axe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8MD-1U-m8n"/>
                             <constraint firstAttribute="trailing" secondItem="zrp-JX-hWd" secondAttribute="trailing" id="9VA-WW-sXR"/>
@@ -166,6 +182,7 @@
                             <constraint firstItem="ge2-xB-Xgq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MyL-bq-XVE"/>
                             <constraint firstAttribute="trailing" secondItem="GCA-4M-f4U" secondAttribute="trailing" id="Ycx-PT-fDk"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="top" secondItem="zMf-65-aM1" secondAttribute="bottom" id="bSt-ch-ogC"/>
+                            <constraint firstItem="8dI-Er-KQE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cZB-O4-gr5"/>
                             <constraint firstItem="gZK-pj-slH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dw9-K3-pFL"/>
                             <constraint firstItem="ge2-xB-Xgq" firstAttribute="top" secondItem="gZK-pj-slH" secondAttribute="bottom" constant="10" id="eAB-kN-D22"/>
                             <constraint firstAttribute="trailing" secondItem="LqO-pf-axe" secondAttribute="trailing" id="gDr-x6-OFs"/>
@@ -223,6 +240,25 @@
             </objects>
             <point key="canvasLocation" x="1833" y="1122"/>
         </scene>
+        <!--Collection Drag View Controller-->
+        <scene sceneID="5DQ-pB-vLY">
+            <objects>
+                <viewController id="rcS-7f-fga" customClass="CollectionDragViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gc4-6E-ER0"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUZ-m0-Tj7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kS6-9l-4xv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9bJ-23-Xnu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcX-NF-Jm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2537" y="1121"/>
+        </scene>
         <!--Table View Edit Multi Select View Controller-->
         <scene sceneID="Gj8-0e-aES">
             <objects>
@@ -259,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yc-td-Wgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537" y="-196"/>
+            <point key="canvasLocation" x="2578" y="-197"/>
         </scene>
         <!--Collection View Radio View Controller-->
         <scene sceneID="scC-hc-OJG">
@@ -278,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSY-nb-XBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537" y="-1039"/>
+            <point key="canvasLocation" x="2684" y="-1039"/>
         </scene>
         <!--Table View Multi Select View Controller-->
         <scene sceneID="kPv-mt-6ux">

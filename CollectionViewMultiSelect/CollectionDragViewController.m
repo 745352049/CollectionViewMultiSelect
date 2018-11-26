@@ -1,56 +1,36 @@
 //
-//  CollectionViewRadioViewController.m
+//  CollectionDragViewController.m
 //  CollectionViewMultiSelect
 //
-//  Created by 水晶岛 on 2018/6/30.
-//  Copyright © 2018年 水晶岛. All rights reserved.
+//  Created by 水晶岛 on 2018/11/26.
+//  Copyright © 2018 水晶岛. All rights reserved.
 //
 
-#import "CollectionViewRadioViewController.h"
+#import "CollectionDragViewController.h"
 #import "CollectionViewCell.h"
 #import "YYModel.h"
 #import "PhotoModel.h"
-
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define UI_SafeArea_Height ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34.0:0.0)
 #define UI_NavBar_Height ([[UIApplication sharedApplication] statusBarFrame].size.height>20?88.0:64.0)
 
-@interface CollectionViewRadioViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface CollectionDragViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
-@property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end
 
-@implementation CollectionViewRadioViewController
+@implementation CollectionDragViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = @"单选";
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 60, 44);
-    [btn setTitle:@"删除" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(deleteAction) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem  *barBtn = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.navigationItem.rightBarButtonItem = barBtn;
+    self.navigationItem.title = @"CollectionCell拖动";
     [self loadData];
-    [self collectionView];
-}
-- (void)deleteAction {
-    if ([self.indexPath length] == 0) {
-        NSLog(@"请选择要删除的图片");
-        return;
-    }
-    PhotoModel *itemModel = [self.dataSource objectAtIndex:self.indexPath.row];
-    [self.dataSource removeObject:itemModel];
-    [self.collectionView deleteItemsAtIndexPaths:@[self.indexPath]];
-    self.indexPath = NULL;
 }
 #pragma mark - Delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -70,21 +50,16 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    PhotoModel *itemModel = [self.dataSource objectAtIndex:indexPath.row];
-    itemModel.isSelected = [itemModel.isSelected isEqual:@"normal"] ? @"select" : @"normal";
-    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
-    // 取消之前选中的 indexPath
-    if ([self.indexPath length] == 2) {
-        PhotoModel *model = [self.dataSource objectAtIndex:self.indexPath.row];
-        model.isSelected = [model.isSelected isEqual:@"normal"] ? @"select" : @"normal";
-        [collectionView reloadItemsAtIndexPaths:@[self.indexPath]];
-    }
-    // 记录当前选择的 indexPath
-    self.indexPath = indexPath;
+    NSLog(@"点击section%ld的第%ld个cell",indexPath.section,indexPath.row);
 }
-/**
- 获取数据
- */
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
+    id obj = [self.dataSource objectAtIndex:sourceIndexPath.item];
+    [self.dataSource removeObject:obj];
+    [self.dataSource insertObject:obj atIndex:destinationIndexPath.item];
+}
 - (void)loadData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"textJson" ofType:@"json"];
     NSData *data = [[NSData alloc] initWithContentsOfFile:path];
@@ -92,8 +67,34 @@
     NSArray *dataArray = [json objectForKey:@"data"];
     for (NSDictionary *dict in dataArray) {
         PhotoModel *model = [PhotoModel yy_modelWithDictionary:dict];
-        model.isSelected = @"normal";
         [self.dataSource addObject:model];
+    }
+    [self collectionView];
+}
+- (void)longPress:(UILongPressGestureRecognizer *)longPress{
+    UIGestureRecognizerState state = longPress.state;
+    switch (state) {
+        case UIGestureRecognizerStateBegan:{
+            CGPoint pressPoint = [longPress locationInView:self.collectionView];
+            NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pressPoint];
+            if (!indexPath) {
+                break;
+            }
+            [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+            break;
+        }
+        case UIGestureRecognizerStateChanged:{
+            CGPoint pressPoint = [longPress locationInView:self.collectionView];
+            [self.collectionView updateInteractiveMovementTargetPosition:pressPoint];
+            break;
+        }
+        case UIGestureRecognizerStateEnded:{
+            [self.collectionView endInteractiveMovement];
+            break;
+        }
+        default:
+            [self.collectionView cancelInteractiveMovement];
+            break;
     }
 }
 #pragma mark - 懒加载
@@ -122,6 +123,9 @@
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCellID"];
+        //添加长按手势
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+        [_collectionView addGestureRecognizer:longPress];
         [self.view addSubview:_collectionView];
     }
     return _collectionView;
@@ -131,5 +135,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
