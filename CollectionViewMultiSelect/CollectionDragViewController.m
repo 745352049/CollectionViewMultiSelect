@@ -72,30 +72,33 @@
     [self collectionView];
 }
 - (void)longPress:(UILongPressGestureRecognizer *)longPress{
-    UIGestureRecognizerState state = longPress.state;
-    switch (state) {
-        case UIGestureRecognizerStateBegan:{
-            CGPoint pressPoint = [longPress locationInView:self.collectionView];
-            NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pressPoint];
-            if (!indexPath) {
+    if (@available(iOS 9.0, *)) {
+        UIGestureRecognizerState state = longPress.state;
+        switch (state) {
+            case UIGestureRecognizerStateBegan:{
+                CGPoint pressPoint = [longPress locationInView:self.collectionView];
+                NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pressPoint];
+                if (!indexPath) {
+                    break;
+                }
+                [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
                 break;
             }
-            [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
-            break;
+            case UIGestureRecognizerStateChanged:{
+                CGPoint pressPoint = [longPress locationInView:self.collectionView];
+                [self.collectionView updateInteractiveMovementTargetPosition:pressPoint];
+                break;
+            }
+            case UIGestureRecognizerStateEnded:{
+                [self.collectionView endInteractiveMovement];
+                break;
+            }
+            default:
+                [self.collectionView cancelInteractiveMovement];
+                break;
         }
-        case UIGestureRecognizerStateChanged:{
-            CGPoint pressPoint = [longPress locationInView:self.collectionView];
-            [self.collectionView updateInteractiveMovementTargetPosition:pressPoint];
-            break;
-        }
-        case UIGestureRecognizerStateEnded:{
-            [self.collectionView endInteractiveMovement];
-            break;
-        }
-        default:
-            [self.collectionView cancelInteractiveMovement];
-            break;
     }
+    
 }
 #pragma mark - 懒加载
 - (NSMutableArray *)dataSource {

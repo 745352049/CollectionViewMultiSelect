@@ -1,12 +1,12 @@
 //
-//  TableViewEditRadioViewController.m
+//  TableViewDragViewController.m
 //  CollectionViewMultiSelect
 //
-//  Created by 水晶岛 on 2018/7/1.
-//  Copyright © 2018年 水晶岛. All rights reserved.
+//  Created by 水晶岛 on 2018/11/26.
+//  Copyright © 2018 水晶岛. All rights reserved.
 //
 
-#import "TableViewEditRadioViewController.h"
+#import "TableViewDragViewController.h"
 #import "PhotoModel.h"
 #import <YYModel.h>
 #import "TableViewCell.h"
@@ -16,38 +16,21 @@
 #define UI_SafeArea_Height ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34.0:0.0)
 #define UI_NavBar_Height ([[UIApplication sharedApplication] statusBarFrame].size.height>20?88.0:64.0)
 
-@interface TableViewEditRadioViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface TableViewDragViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
-@implementation TableViewEditRadioViewController
+@implementation TableViewDragViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = @"编辑";
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 60, 44);
-    [btn setTitle:@"编辑" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem  *barBtn = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.navigationItem.rightBarButtonItem = barBtn;
+    self.navigationItem.title = @"TableViewCell拖动";
     [self loadData];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TableViewCell class]) bundle:nil] forCellReuseIdentifier:@"TableViewCellID"];
-}
-- (void)editAction:(UIButton *)sender {
-    if ([sender.titleLabel.text isEqualToString:@"编辑"]) {
-        [self.tableView setEditing:YES animated:YES];
-        [sender setTitle:@"完成" forState:UIControlStateNormal];
-    } else if ([sender.titleLabel.text isEqualToString:@"完成"]) {
-        [self.tableView setEditing:NO animated:NO];
-        [sender setTitle:@"编辑" forState:UIControlStateNormal];
-    }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -63,14 +46,14 @@
     
     return cell;
 }
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.dataSource removeObjectAtIndex:indexPath.row];
-    }
-    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleNone;
 }
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [self.dataSource exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44.0;
@@ -87,9 +70,6 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return nil;
 }
-/**
- 获取数据
- */
 - (void)loadData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"textJson" ofType:@"json"];
     NSData *data = [[NSData alloc]initWithContentsOfFile:path];
@@ -97,7 +77,6 @@
     NSArray *dataArray = [json objectForKey:@"data"];
     for (NSDictionary *dict in dataArray) {
         PhotoModel *model = [PhotoModel yy_modelWithDictionary:dict];
-        model.isSelected = @"normal";
         [self.dataSource addObject:model];
     }
     [self.tableView reloadData];
@@ -115,7 +94,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.allowsMultipleSelectionDuringEditing = NO;
+        [_tableView setEditing:YES animated:YES];
+        _tableView.allowsMultipleSelectionDuringEditing = YES;
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TableViewCell class]) bundle:nil] forCellReuseIdentifier:@"TableViewCellID"];
         [self.view addSubview:_tableView];
     }

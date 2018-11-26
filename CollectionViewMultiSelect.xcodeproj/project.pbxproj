@@ -17,6 +17,7 @@
 		3F78FC5B20E7803C005E19E6 /* TableViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5A20E7803C005E19E6 /* TableViewRadioViewController.m */; };
 		3F78FC5E20E785D5005E19E6 /* CollectionViewRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */; };
 		3FA927C321ABC5A5003840A8 /* CollectionDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA927C221ABC5A5003840A8 /* CollectionDragViewController.m */; };
+		3FA927C621ABD193003840A8 /* TableViewDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA927C521ABD193003840A8 /* TableViewDragViewController.m */; };
 		3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A520DA07150055EE61 /* AppDelegate.m */; };
 		3FB8B7A920DA07150055EE61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8B7A820DA07150055EE61 /* ViewController.m */; };
 		3FB8B7AC20DA07150055EE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8B7AA20DA07150055EE61 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 		3F78FC5D20E785D5005E19E6 /* CollectionViewRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewRadioViewController.m; sourceTree = "<group>"; };
 		3FA927C121ABC5A5003840A8 /* CollectionDragViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionDragViewController.h; sourceTree = "<group>"; };
 		3FA927C221ABC5A5003840A8 /* CollectionDragViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDragViewController.m; sourceTree = "<group>"; };
+		3FA927C421ABD193003840A8 /* TableViewDragViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDragViewController.h; sourceTree = "<group>"; };
+		3FA927C521ABD193003840A8 /* TableViewDragViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDragViewController.m; sourceTree = "<group>"; };
 		3FB8B7A120DA07150055EE61 /* CollectionViewMultiSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewMultiSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8B7A420DA07150055EE61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FB8B7A520DA07150055EE61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				3F521E2920ECA1EA00E8F250 /* TableViewEditMultiSelectViewController.m */,
 				3F09C79F20E8104A005A6674 /* TableViewEditRadioViewController.h */,
 				3F09C7A020E8104A005A6674 /* TableViewEditRadioViewController.m */,
+				3FA927C421ABD193003840A8 /* TableViewDragViewController.h */,
+				3FA927C521ABD193003840A8 /* TableViewDragViewController.m */,
 				3F78FC5420E778F2005E19E6 /* TableViewCell.h */,
 				3F78FC5520E778F2005E19E6 /* TableViewCell.m */,
 				3F78FC5620E778F2005E19E6 /* TableViewCell.xib */,
@@ -269,6 +274,7 @@
 				3F78FC5720E778F2005E19E6 /* TableViewCell.m in Sources */,
 				3FB8B7B420DA07150055EE61 /* main.m in Sources */,
 				3FB8B7A620DA07150055EE61 /* AppDelegate.m in Sources */,
+				3FA927C621ABD193003840A8 /* TableViewDragViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

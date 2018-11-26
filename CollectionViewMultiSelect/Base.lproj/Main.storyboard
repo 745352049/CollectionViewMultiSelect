@@ -160,11 +160,25 @@
                                     <constraint firstAttribute="height" constant="40" id="5eW-2G-16R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="CollectionView拖动">
+                                <state key="normal" title="CollectionViewCell拖动">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="rcS-7f-fga" kind="push" id="X97-DV-fu2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QD-TO-1Jy">
+                                <rect key="frame" x="0.0" y="464" width="375" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="O1e-5n-TmN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="TableViewCell拖动">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aIE-89-9tC" kind="push" id="Arl-Ny-P3E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,14 +186,17 @@
                         <constraints>
                             <constraint firstItem="8dI-Er-KQE" firstAttribute="top" secondItem="ge2-xB-Xgq" secondAttribute="bottom" constant="10" id="2zY-5t-8Kl"/>
                             <constraint firstAttribute="trailing" secondItem="Qvb-JB-HWB" secondAttribute="trailing" id="3RE-Rw-BVh"/>
+                            <constraint firstItem="9QD-TO-1Jy" firstAttribute="top" secondItem="8dI-Er-KQE" secondAttribute="bottom" constant="10" id="3SK-Vo-dl5"/>
                             <constraint firstAttribute="trailing" secondItem="8dI-Er-KQE" secondAttribute="trailing" id="62O-KX-qIs"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wm-1I-TPY"/>
                             <constraint firstItem="LqO-pf-axe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8MD-1U-m8n"/>
                             <constraint firstAttribute="trailing" secondItem="zrp-JX-hWd" secondAttribute="trailing" id="9VA-WW-sXR"/>
+                            <constraint firstAttribute="trailing" secondItem="9QD-TO-1Jy" secondAttribute="trailing" id="AOL-v8-gHk"/>
                             <constraint firstItem="Qvb-JB-HWB" firstAttribute="top" secondItem="zrp-JX-hWd" secondAttribute="bottom" constant="10" id="IF5-iO-aCy"/>
                             <constraint firstItem="zrp-JX-hWd" firstAttribute="top" secondItem="yui-wD-JiB" secondAttribute="bottom" constant="10" id="JOX-Oj-CHc"/>
                             <constraint firstItem="zrp-JX-hWd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M6S-qY-viZ"/>
                             <constraint firstItem="ge2-xB-Xgq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MyL-bq-XVE"/>
+                            <constraint firstItem="9QD-TO-1Jy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xgd-fv-nZb"/>
                             <constraint firstAttribute="trailing" secondItem="GCA-4M-f4U" secondAttribute="trailing" id="Ycx-PT-fDk"/>
                             <constraint firstItem="yui-wD-JiB" firstAttribute="top" secondItem="zMf-65-aM1" secondAttribute="bottom" id="bSt-ch-ogC"/>
                             <constraint firstItem="8dI-Er-KQE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cZB-O4-gr5"/>
@@ -243,7 +260,7 @@
         <!--Collection Drag View Controller-->
         <scene sceneID="5DQ-pB-vLY">
             <objects>
-                <viewController id="rcS-7f-fga" customClass="CollectionDragViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="rcS-7f-fga" customClass="CollectionDragViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gc4-6E-ER0"/>
                         <viewControllerLayoutGuide type="bottom" id="cUZ-m0-Tj7"/>
@@ -277,6 +294,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFh-n6-eOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537" y="463"/>
+        </scene>
+        <!--Table View Drag View Controller-->
+        <scene sceneID="Lnr-7f-QQp">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="aIE-89-9tC" customClass="TableViewDragViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dN-ND-I5N"/>
+                        <viewControllerLayoutGuide type="bottom" id="MvB-2B-Yks"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J6W-ce-IDp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jVk-F2-IuV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pR9-la-KRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3255" y="463"/>
         </scene>
         <!--Table View Radio View Controller-->
         <scene sceneID="So6-Wu-KOq">
